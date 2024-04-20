@@ -1,2 +1,85 @@
 # Ryzentosh
 收集一些有关AMD的Hackintosh的资料
+
+
+## Prerequisites or Tools
+----------------
+
+- [OpenCore](https://github.com/acidanthera/OpenCorePkg)
+  - [OC Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
+  - [Post Install](https://dortania.github.io/OpenCore-Post-Install/)
+  - [ACPI Things](https://dortania.github.io/Getting-Started-With-ACPI/#a-quick-explainer-on-acpi)
+
+- [Configurators](https://github.com/ic005k/OCAuxiliaryTools)
+  - [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools)
+  - [OC Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/), only for MacOS.
+  - [ProperTree](https://github.com/corpnewt/ProperTree)
+
+- [Installer Flasher](https://etcher.balena.io/)
+  - [BalenaEtcher](https://etcher.balena.io/)
+  - [Rufus](https://github.com/pbatard/rufus)
+  - [Ventoy](https://github.com/ventoy/Ventoy), which doesn't support darwin directly.
+
+- [IASL Tools](https://github.com/ic005k/Xiasl), in case you need to compile your modified ACPI files for hot patching.
+  - [For Windows](https://www.intel.com/content/www/us/en/developer/topic-technology/open/acpica/download.html)
+  - [For MacOS](https://github.com/HelllGuest/acpica-tools-macos)
+  - [For win/mac/linux](https://github.com/ic005k/Xiasl), with GUI, can save/edit/compile/decompile ACPI files.
+
+- [USBToolBox](https://github.com/USBToolBox/tool), If you have USB 3.0, you will need this.
+
+- [SSDTTime](https://github.com/corpnewt/SSDTTime), which helps you to collect your own SSDT files.
+
+- [HackinTool](https://github.com/benbaker76/Hackintool)
+
+## Some guidelines for kexts/ssdt collection
+-----------------
+
+- [Gathering files](https://dortania.github.io/OpenCore-Install-Guide/ktext.html)
+- [国光](https://apple.sqlsec.com/3-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/3-3/)
+- [Noot](https://chefkissinc.github.io/guide/gathering-files/kexts), with AMD laptops supported.
+- [NootedRed](https://chefkissinc.github.io/nred), for AMD iGPU.
+- [GenericUSBXHCI for Ryzen](https://github.com/RattletraPM/GUX-RyzenXHCIFix), makes your trackpad work properly on Ryzen platform.
+  - Use "-vi2c-force-polling" in boot-args, then the trackpad will work properly for your Ryzentosh.
+- [AMD GPU sensor](https://github.com/ChefKissInc/RadeonSensor)
+- [AMD GPU Spoof](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html), you may need this for Faking AMD GPU ID.
+- [Get RX550 with lexa cores to work](https://www.youtube.com/watch?v=xb5yKRhOtp0)
+  - [issue_264](https://github.com/dortania/bugtracker/issues/264)
+  - [issue_129](https://github.com/dortania/bugtracker/issues/129)
+- [How to adjust PowerPlayTable for AMD GPU](https://www.reddit.com/r/hackintosh/comments/hg56pv/guide_polaris_rx_560_580_etc_custom_powerplay/)
+  - [video](https://www.bilibili.com/video/BV1ZT4y1v7Ac/?spm_id_from=333.337.search-card.all.click&vd_source=1835c845bf533ce47c2b4d33db3419b5)
+- [各种kext的功能列表](https://macoshome.com/hackintosh/hcourse/7656.html)
+
+## Special workarouds for Ryzentosh
+------------------
+
+- [Docker workaround for Ryzentosh 1](https://gist.github.com/sergeycherepanov/cbe82132b2064cc62b16793b6c61e6c8)
+- [Docker workaround for Ryzentosh 2](https://gist.github.com/slykar/e92732be9bf81a71e08068245656d70e)
+- [Docker using VirtualBox](https://github.com/sergeycherepanov/homebrew-docker-virtualbox)
+- [VSCode/Chrome/Chromium-based workaroud for Ryzentosh](https://chefkissinc.github.io/nred#chrome-chromium-based-browsers-and-apps-like-sublime-text-cause-graphical-artefacts-amongst-other-problems)
+- [An elegant way solving VSCode/Chromium-based browser(OpenGL-related) problems](https://github.com/ChefKissInc/NootedRed/issues/158)
+- [Wechat/QQ workaroud for Ryzentosh](https://pan.xunlei.com/s/VNhkaG568VndHC4GhWdbW0nhA1?pwd=ng2g#)
+- [Android simulator workaroud suggestions](https://github.com/allansrc/AMD-OSX-Ryzentosh-B350)
+
+## Docker-OSX(using MacOS in docker)
+----------------------
+
+- [Docker-OSX](https://github.com/sickcodes/Docker-OSX)
+
+## Useful free apps for MacOS
+----------------------
+
+- [stats](https://github.com/exelban/stats)
+- [raycast](https://www.raycast.com/)
+- [karabiner-elements](https://karabiner-elements.pqrs.org/)
+- [peazip](https://github.com/peazip/PeaZip)
+- [appflowy](https://github.com/AppFlowy-IO/AppFlowy)
+- [neatdownloadmanager](https://www.neatdownloadmanager.com/index.php/en/)
+- [betterdisplay](https://github.com/waydabber/BetterDisplay)
+- [notepad--](https://github.com/cxasm/notepad--)
+- [fig player](https://apps.apple.com/in/app/fig-player-play-mp4-mkv-mp3/id1612400976?mt=12)
+- [android file transfer](https://www.android.com/filetransfer/)
+- [iriun webcam](https://iriun.com/)
+- [telegramlite](https://apps.apple.com/us/app/telegram-lite/id946399090?mt=12)
+- [edge browser](https://www.microsoft.com/en-us/edge/download?form=MA13FJ)
+- [foxit reader](https://www.foxit.com/pdf-reader/)
+- [vscode](https://code.visualstudio.com/download)
